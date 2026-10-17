@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liberation War Archive</title>
+    <style>
+        /* CSS Reset & Variables */
+        :root {
+            --dark-green: #1a4331;
+            --light-cream: #f8f6f0;
+            --brand-red: #8b1c1c;
+            --brand-yellow: #d8c99b;
+            --text-light: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-cream);
+            color: #333;
+        }
+
+        /* Top Green Section */
+        .hero-section {
+            background-color: var(--dark-green);
+            color: white;
+            padding-bottom: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Navigation */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .logo img {
+            width: 30px;
+            height: 30px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        nav ul li a.active, nav ul li a:hover {
+            color: var(--brand-yellow);
+        }
+
+        .btn-nav {
+            background-color: var(--brand-red);
+            padding: 5px 15px;
+            border-radius: 4px;
+        }
+
+        /* Hero Content */
+        .hero-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 60px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .hero-text {
+            max-width: 50%;
+        }
+
+        .hero-text h1 {
+            color: var(--brand-yellow);
+            font-size: 3rem;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            line-height: 1.1;
+        }
+
+        .hero-text h3 {
+            font-size: 1.1rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+            color: var(--text-light);
+        }
+
+        .hero-text p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #b3c6be;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background-color: var(--brand-red);
+            color: white;
+            border: 2px solid var(--brand-red);
+        }
+
+        .btn-primary:hover {
+            background-color: #a82222;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--dark-green);
+        }
+
+        /* Hero Image */
+        .hero-image {
+            position: relative;
+            max-width: 45%;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border: 4px solid #fff;
+            position: relative;
+            z-index: 2;
+        }
+
+        .red-circle {
+            position: absolute;
+            bottom: -30px;
+            right: -30px;
+            width: 200px;
+            height: 200px;
+            background-color: var(--brand-red);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        /* Featured Highlights */
+        .highlights {
+            padding: 60px 5%;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .highlights h2 {
+            font-size: 1.8rem;
+            color: #222;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cards-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            width: 300px;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card h4 {
+            padding: 15px;
+            font-size: 1.1rem;
+            background-color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Top Dark Green Section -->
+    <section class="hero-section">
+        <!-- Navigation -->
+        <header>
+            <div class="logo">
+                <!-- Placeholder for logo icon -->
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M12 2L2 22h20L12 2z"/></svg>
+                LIBERATION WAR ARCHIVE
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="btn-nav active">Home</a></li>
+                    <li><a href="#">Documents</a></li>
+                    <li><a href="#">Interviews</a></li>
+                    <li><a href="#">Photographs</a></li>
+                    <li><a href="#">Contribute</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Hero Content -->
+        <div class="hero-container">
+            <div class="hero-text">
+                <h1>Liberation War Archive</h1>
+                <h3>Preserving the history and memories of the Liberation War of Bangladesh (1971)</h3>
+                <p>Its significance of the 1971 war and the Liberation War of Bangladesh among inamreshet we s freetionfighirers in Archive. War archive to protect historical memory to protect their ot histerical memory.</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary">Explore the Archive</a>
+                    <a href="#" class="btn btn-outline">Contribute Material</a>
+                </div>
+            </div>
+            
+            <div class="hero
